@@ -4,10 +4,12 @@ services:
     build: ./django
     ports:
       - 8000:8000
+    environment:
+     - BG_COLOR
     depends_on:
       - postgres
   postgres:
     image: postgres:14
     environment:
-      POSTGRES_PASSWORD: thisisnotsecure
+      - POSTGRES_PASSWORD=thisisnotsecure
     restart: always

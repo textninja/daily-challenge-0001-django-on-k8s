@@ -1,8 +1,7 @@
 {% load static %}
 <style>
     body {
-        background-color: red;
-        color: white;
+        background-color: {{ bg_color|default_if_none:"white" }};
     }
 </style>
 <link rel="stylesheet" type="text/css" href="{% static 'dtc0001themechange/style.css' %}" />
